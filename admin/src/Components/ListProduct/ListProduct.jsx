@@ -6,7 +6,7 @@ const ListProduct = () => {
   const [all_products,setAllProducts] = useState([]);
 
   const fetchInfo = async () =>{
-    await fetch('http://localhost:4000/allproducts').then((res)=>res.json()).then((data)=>{setAllProducts(data)})
+    await fetch('https://ecommerce-website-xhhx.onrender.com/allproducts').then((res)=>res.json()).then((data)=>{setAllProducts(data)})
   
   }
    useEffect(() =>{
@@ -14,7 +14,7 @@ const ListProduct = () => {
    },[])
    const remove_product = async (id) => {
     try {
-      const response = await fetch('http://localhost:4000/removeproduct', {
+      const response = await fetch('https://ecommerce-website-xhhx.onrender.com/removeproduct', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
