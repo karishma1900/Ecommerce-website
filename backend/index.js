@@ -12,11 +12,7 @@ const { type } = require("os");
 
 app.use(express.json());
 app.use(cors());
-const cors = require('cors');
-app.use(cors({
-  origin: ['https://frontend-6hk0.onrender.com/'], // adjust to your frontend website domain
-  credentials: true,
-}));
+
 
 // Database connection with mongoodb 
 mongoose.connect("mongodb+srv://helotune258:karishma2000@cluster0.p2ys7.mongodb.net/e-commerce");
